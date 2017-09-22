@@ -53,7 +53,14 @@ print "After PCA on all data we get: "
 print Y
 
 
-#fig = plt.figure()
-#ax = fig.add_subplot(111, projection='3d')
-#ax.scatter(x, y, z)
-#plt.show()
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(Y[:,0], Y[:,1], Y[:,2])
+plt.show()
+
+print "question 3 :"
+matrix = np.array([[0,-1],[2,3]])
+vals, vecs = np.linalg.eig(matrix)
+print "checking values"
+print vals
+print vecs
